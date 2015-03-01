@@ -44,7 +44,7 @@ while ($row = @mysqli_fetch_assoc($result)){
   echo 'address="' . parseToXML($row['address']) . '" ';
   echo 'lat="' . $row['lat'] . '" ';
   echo 'lng="' . $row['lng'] . '" ';
-  echo 'type="' . $row['type'] . '" ';
+  echo 'percent="' . $row['percent'] . '" ';
   echo '/>';
 }
 
