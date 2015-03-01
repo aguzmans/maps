@@ -9,3 +9,4 @@
 $username="root";
 $password="";
 $database="maps";
+$host = "localhost";

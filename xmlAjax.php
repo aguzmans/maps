@@ -13,7 +13,7 @@ return $xmlStr;
 }
 
 // Opens a connection to a MySQL server
-$connection=mysqli_connect ('localhost', $username, $password);
+$connection=mysqli_connect ($host , $username, $password);
 if (!$connection) {
   die('Not connected : ' . mysql_error());
 }
@@ -32,6 +32,10 @@ if (!$result) {
 }
 
 header("Content-type: text/xml");
+$total = mysqli_num_rows($result);
+$totalRed = 0;
+$totalBlue = 0;
+$totalGreen = 0;
 
 // Start XML file, echo parent node
 echo '<markers>';
@@ -45,6 +49,10 @@ while ($row = @mysqli_fetch_assoc($result)){
   echo 'lat="' . $row['lat'] . '" ';
   echo 'lng="' . $row['lng'] . '" ';
   echo 'percent="' . $row['percent'] . '" ';
+  echo 'no="' . $row['no'] . '" ';
+  echo 'shortcut_dim_6_code="' . $row['shortcut_dim_6_code'] . '" '; 
+  echo 'shortcut_dim_7_code="' . $row['shortcut_dim_7_code'] . '" ';
+  echo 'city="' . $row['city'] . '" ';
   echo '/>';
 }
 
