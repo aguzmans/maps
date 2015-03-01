@@ -3,16 +3,17 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <title>Google Maps Example</title>
+    <LINK href="styles.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
     <script type="text/javascript">
     //<![CDATA[
 
     var customIcons = {
       bad: {
-        icon: 'http://labs.google.com/ridefinder/images/mm_20_blue.png'
+        icon: 'http://labs.google.com/ridefinder/images/mm_20_red.png'
       },
       good: {
-        icon: 'http://labs.google.com/ridefinder/images/mm_20_red.png'
+        icon: 'http://labs.google.com/ridefinder/images/mm_20_blue.png'
       },
       excellent: {
         icon: 'http://maps.gstatic.com/mapfiles/ridefinder-images/mm_20_green.png'
@@ -47,8 +48,6 @@
           } else {
             var icon = customIcons['excellent'] || {};
           }
-              
-
           var marker = new google.maps.Marker({
             map: map,
             position: point,
